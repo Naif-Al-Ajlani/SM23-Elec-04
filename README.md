@@ -7,7 +7,7 @@ PIR sensors allow you to sense motion. They are used to detect whether a human h
 ![pir_sensor](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/33d29edf-85f8-4ed1-95d9-6041acad80b9)
 
 
-# Advantages of PIR Sensors −
+# Advantages of PIR Sensors
 
 Small in size
 Wide lens range
@@ -35,6 +35,7 @@ You will need the following components:
 + 1 × Arduino Uno R3
 + 2 × PIR Sensor (MQ3)
 + 2 × LEDs
++ 2 × Resistor
 + 12 × wires
 
 # Arduino code
@@ -45,7 +46,7 @@ Follow the circuit diagram and make the connections as shown in the image below.
 
 Open the Arduino IDE software on your computer. Coding in the Arduino language will control your circuit. Open a new sketch File by clicking New.
 
-Code:
++ Code:
 ```
 #define pirPin 2
 int calibrationTime = 30;
@@ -87,6 +88,55 @@ void PIRSensor() {
    }
 }
 ```
+
+# Simulation on tinkercad
+
+PIR sensors motion detection tracking System on tinkercad
+
++ link: https://www.tinkercad.com/things/lOJbj2qYDrI
+
+Code:
+
+  ```
+  const int PIR1_PIN = 3;
+const int PIR2_PIN = 4;
+
+int visitors = 0;
+int lastRIPdetected = 0;
+bool b_PIR1_active = false;
+
+void setup() {
+  pinMode(PIR1_PIN, INPUT);  
+  pinMode(PIR2_PIN, INPUT);  
+  Serial.begin(9600);  
+  Serial.println("Visitors are welcome");
+}
+
+void loop() {
+  
+  if (digitalRead(PIR1_PIN) == HIGH) {
+    
+    if (!b_PIR1_active && lastRIPdetected == 0) {
+      b_PIR1_active = true;  
+      lastRIPdetected = 1;  
+      Serial.println("Visit started");
+    }
+  } else {
+    b_PIR1_active = false;
+    if (lastRIPdetected == 1) lastRIPdetected = 2;
+  }
+
+ 
+  if (lastRIPdetected == 2 && digitalRead(PIR2_PIN) == HIGH) {
+    visitors++; 
+    lastRIPdetected = 0; 
+    Serial.println("Visitor entered. Visitors: " + String(visitors));
+  }
+}
+```
+
+
+
 # Code Notes
 
 PIR sensor has three terminals - Vcc, OUT and GND. Connect the sensor as follows −
@@ -102,4 +152,11 @@ You can adjust the sensor sensitivity and delay time via two variable resistors 
 Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
 
 # Result
-You will see a message on your serial port if a motion is detected and the LEDs will be tuned on another message when the motion stops and the LEDs will be off.
+You will see a message on your serial port if a motion is detected and with it the LEDs will be turned on, another message is displayed when the motion stops and the LEDs will be off.
+
+# Resources
+
++ https://support.arduino.cc/hc/en-us/articles/4403050020114-Troubleshooting-PIR-Sensor-and-sensitivity-adjustment
++ https://www.tutorialspoint.com/arduino/arduino_pir_sensor.htm
++ https://www.instructables.com/How-to-Use-a-PIR-Motion-Sensor-With-Arduino/
++ https://www.youtube.com/watch?v=FxaTDvs34mM
