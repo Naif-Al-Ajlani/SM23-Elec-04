@@ -44,13 +44,7 @@ Follow the circuit diagram and make the connections as shown in the image below.
 
 Open the Arduino IDE software on your computer. Coding in the Arduino language will control your circuit. Open a new sketch File by clicking New.
 
-<img width="957" alt="2023-09-04 (3) (1)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/b39f3d9c-68e7-4e0f-b1d9-4df0962dc329">
-
-
-
 + Note: This code only uses one PIR sensor connected to one LED throw Arduino UNO and Breadboard
-
-<img width="436" alt="2023-09-04 (3)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/186e72f5-f47d-4e75-aa36-73b40fefaf92">
 
 + Code:
 
