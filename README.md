@@ -158,8 +158,6 @@ You can adjust the sensor sensitivity and delay time via two variable resistors 
 
 ![delay_time_adjust](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/48885bfd-2172-46a4-aaea-7ac00f67be01)
 
-Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
-
 # Task result
 
 The PIR sensor can be adjusted manually by looking at the back. I had to make some slight adjustments to make the sensor more reactive before I got too far into the coding process.
