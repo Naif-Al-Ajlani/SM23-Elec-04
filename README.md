@@ -104,7 +104,7 @@ PIR sensors motion detection tracking System on tinkercad
 
 + link: https://www.tinkercad.com/things/lOJbj2qYDrI
 
-<img width="960" alt="2023-09-04 (2)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/a92e8ee6-b696-4232-840a-fefc0bb97e3d">
+<img width="960" alt="2023-09-04 (2)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/e3331fae-77fe-4c52-aa2f-cd2562c63f36">
 
 Code:
 
@@ -156,7 +156,7 @@ PIR sensor has three terminals - Vcc, OUT and GND. Connect the sensor as follows
   
 You can adjust the sensor sensitivity and delay time via two variable resistors located at the bottom of the sensor board.
 
-<img width="960" alt="2023-09-04 (2)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/de006511-a03f-46b3-9395-662ec2547cfb">
+![delay_time_adjust](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/48885bfd-2172-46a4-aaea-7ac00f67be01)
 
 Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
 
