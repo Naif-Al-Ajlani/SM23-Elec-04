@@ -46,47 +46,56 @@ Follow the circuit diagram and make the connections as shown in the image below.
 
 Open the Arduino IDE software on your computer. Coding in the Arduino language will control your circuit. Open a new sketch File by clicking New.
 
+<img width="436" alt="2023-09-04 (3)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/186e72f5-f47d-4e75-aa36-73b40fefaf92">
+
+
++ Note: This code only uses one PIR sensor:
 + Code:
+
 ```
-#define pirPin 2
-int calibrationTime = 30;
-long unsigned int lowIn;
-long unsigned int pause = 5000;
-boolean lockLow = true;
-boolean takeLowTime;
-int PIRValue = 0;
+int ledPin = 13;                  // LED
+int pirPin = 2;                   // PIR Out pin
+int pirStat = 0;                  // PIR status
 
 void setup() {
-   Serial.begin(9600);
-   pinMode(pirPin, INPUT);
+  pinMode(ledPin, OUTPUT);        // declare LED as output
+  pinMode(pirPin, INPUT);         // declare sensor as input
+  Serial.begin(9600);
+  Serial.println("Serial Monitor connected");
+  delay(1000);
+  Serial.print(".");
+  delay(500);
+  Serial.print(".");
+  delay(500);
+  Serial.println(".");
+  delay(500);
+  Serial.println("Please let your sensor calibrate");
+  delay(1000);
+  Serial.println("for 15 to 30 seconds before testing");
+  delay(1000);
+  Serial.print(".");
+  delay(500);
+  Serial.print(".");
+  delay(500);
+  Serial.println(".");
+  delay(500);
 }
 
-void loop() {
-   PIRSensor();
-}
+void loop(){
+ pirStat = digitalRead(pirPin); 
+ if (pirStat == HIGH) {             // if motion detected
+   Serial.println("Motion Detected!");
+   digitalWrite(ledPin, HIGH);      // turn LED ON
+   delay(100);                      // wait for a second
+   digitalWrite(ledPin, LOW);       // turn LED OFF
+   delay(100);                      // wait for a second
+ } 
+ else {
+   digitalWrite(ledPin, LOW);       // LED stays off if no motion detected
+   Serial.println("No Motion Detected!");
+ }
+} 
 
-void PIRSensor() {
-   if(digitalRead(pirPin) == HIGH) {
-      if(lockLow) {
-         PIRValue = 1;
-         lockLow = false;
-         Serial.println("Motion detected.");
-         delay(50);
-      }
-      takeLowTime = true;
-   }
-   if(digitalRead(pirPin) == LOW) {
-      if(takeLowTime){
-         lowIn = millis();takeLowTime = false;
-      }
-      if(!lockLow && millis() - lowIn > pause) {
-         PIRValue = 0;
-         lockLow = true;
-         Serial.println("Motion ended.");
-         delay(50);
-      }
-   }
-}
 ```
 
 # Simulation on tinkercad
@@ -94,6 +103,8 @@ void PIRSensor() {
 PIR sensors motion detection tracking System on tinkercad
 
 + link: https://www.tinkercad.com/things/lOJbj2qYDrI
+
+<img width="960" alt="2023-09-04 (2)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/a92e8ee6-b696-4232-840a-fefc0bb97e3d">
 
 Code:
 
