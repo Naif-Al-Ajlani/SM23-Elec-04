@@ -9,13 +9,13 @@ PIR sensors allow you to sense motion. They are used to detect whether a human h
 
 # Advantages of PIR Sensors
 
-Small in size
-Wide lens range
-Easy to interface
-Inexpensive
-Low-power
-Easy to use
-Do not wear out
++ Small in size
++ Wide lens range
++ Easy to interface
++ Inexpensive
++ Low-power
++ Easy to use
++ Do not wear out
 
 PIRs are made of pyroelectric sensors, a round metal can with a rectangular crystal in the center, which can detect levels of infrared radiation. Everything emits low-level radiation, and the hotter something is, the more radiation is emitted. The sensor in a motion detector is split in two halves. This is to detect motion (change) and not average IR levels. The two halves are connected so that they cancel out each other. If one-half sees more or less IR radiation than the other, the output will swing high or low.
 
@@ -23,10 +23,7 @@ PIRs are made of pyroelectric sensors, a round metal can with a rectangular crys
 
 PIRs have adjustable settings and have a header installed in the 3-pin ground/out/power pads.
 
-![pir_adjustable_settings](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/96dcdf3e-b8f1-499b-8dcc-64e096b11974)
-
 ![pir_adjustable_settings](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/badea204-1e91-4805-9ad9-2038b4e92fe8)
-
 
 For many basic projects or products that need to detect when a person has left or entered the area, PIR sensors are great. Note that PIRs do not tell you the number of people around or their closeness to the sensor. The lens is often fixed to a certain sweep at a distance and they are sometimes set off by the pets in the house.
 
@@ -34,7 +31,7 @@ For many basic projects or products that need to detect when a person has left o
 You will need the following components:
 
 + 1 × Breadboard
-+ 1 × Arduino Uno R3
++ 1 × Arduino Uno
 + 2 × PIR Sensor (MQ3)
 + 2 × LEDs
 + 2 × Resistor
@@ -48,10 +45,10 @@ Follow the circuit diagram and make the connections as shown in the image below.
 
 Open the Arduino IDE software on your computer. Coding in the Arduino language will control your circuit. Open a new sketch File by clicking New.
 
++ Note: This code only uses one PIR sensor connected to one LED throw Arduino UNO and Breadboard
+
 <img width="436" alt="2023-09-04 (3)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/186e72f5-f47d-4e75-aa36-73b40fefaf92">
 
-
-+ Note: This code only uses one PIR sensor:
 + Code:
 
 ```
@@ -164,7 +161,7 @@ You can adjust the sensor sensitivity and delay time via two variable resistors 
 
 Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
 
-# Result
+# Task result
 You will see a message on your serial port if a motion is detected and with it the LEDs will be turned on, another message is displayed when the motion stops and the LEDs will be off.
 
 # Resources
