@@ -4,8 +4,7 @@ Arduino - Electronics and Power Department Task 04 - PIR Sensor motion detection
 
 PIR sensors allow you to sense motion. They are used to detect whether a human has moved in or out of the sensor’s range. They are commonly found in appliances and gadgets used at home or for businesses. They are often referred to as PIR, "Passive Infrared", "Pyroelectric", or "IR motion" sensors.
 
-![pir_sensor](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/33d29edf-85f8-4ed1-95d9-6041acad80b9)
-
+![PIR-Sensor-Pinout](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/e1a3d514-e988-456d-ba38-560a56a8fc70)
 
 # Advantages of PIR Sensors
 
@@ -145,8 +144,6 @@ void loop() {
 }
 ```
 
-
-
 # Code Notes
 
 PIR sensor has three terminals - Vcc, OUT and GND. Connect the sensor as follows −
@@ -162,11 +159,20 @@ You can adjust the sensor sensitivity and delay time via two variable resistors 
 Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
 
 # Task result
-You will see a message on your serial port if a motion is detected and with it the LEDs will be turned on, another message is displayed when the motion stops and the LEDs will be off.
+
+The PIR sensor can be adjusted manually by looking at the back. I had to make some slight adjustments to make the sensor more reactive before I got too far into the coding process.
+
++ Once the   PIR sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion.
+
++ If there is no motion detected by the PIR sensor, Arduino will send a new message saying that the motion has ended via the serial port and the LEDs will be turned off.
+
++ Important Note: I read in a lot of tutorials that the LED light will stay on until the sensor is done calibrating, but the only time the LED was on when I uploaded the script was when I had the power and ground connected to the wrong pins. When my sensor is connected properly, the LED will stay off when the script is uploaded and taht was the only time that it would detect the motion properly.
 
 # Resources
 
 + https://support.arduino.cc/hc/en-us/articles/4403050020114-Troubleshooting-PIR-Sensor-and-sensitivity-adjustment
 + https://www.tutorialspoint.com/arduino/arduino_pir_sensor.htm
 + https://www.instructables.com/How-to-Use-a-PIR-Motion-Sensor-With-Arduino/
-+ https://www.youtube.com/watch?v=FxaTDvs34mM
++ To learn more about how to adjust the "settings" of a PIR sensor: https://www.tweaking4all.com/hardware/pir-sensor/
++ Helpful website that explains the "settings" of the PIR sensor: https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/testing-a-pir
++ PIR Motion Sensor with Arduino tutorial: https://www.youtube.com/watch?v=FxaTDvs34mM
