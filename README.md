@@ -156,7 +156,7 @@ PIR sensor has three terminals - Vcc, OUT and GND. Connect the sensor as follows
   
 You can adjust the sensor sensitivity and delay time via two variable resistors located at the bottom of the sensor board.
 
-![delay_time_adjust](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/461de9d1-a2e9-42cf-ab1c-ec1f306aedef)
+<img width="960" alt="2023-09-04 (2)" src="https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/de006511-a03f-46b3-9395-662ec2547cfb">
 
 Once the sensor detects any motion, Arduino will send a message via the serial port to say that a motion is detected and the LEDs will be turned on. The PIR sense motion will delay for certain time to check if there is a new motion. If there is no motion detected, Arduino will send a new message saying that the motion has ended.
 
