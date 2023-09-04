@@ -166,7 +166,7 @@ The PIR sensor can be adjusted manually by looking at the back. I had to make so
 
 + If there is no motion detected by the PIR sensor, Arduino will send a new message saying that the motion has ended via the serial port and the LEDs will be turned off.
 
-+ Important Note: I read in a lot of tutorials that the LED light will stay on until the sensor is done calibrating, but the only time the LED was on when I uploaded the script was when I had the power and ground connected to the wrong pins. When my sensor is connected properly, the LED will stay off when the script is uploaded and taht was the only time that it would detect the motion properly.
++ Important Note: I read in a lot of tutorials that the LED light will stay on until the sensor is done calibrating, but the only time the LED was on when I uploaded the script was when I had the power and ground connected to the wrong pins. When my sensor is connected properly, the LED will stay off when the script is uploaded and that was the only time it would detect the motion properly.
 
 # Resources
 
