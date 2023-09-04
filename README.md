@@ -23,6 +23,8 @@ PIRs are made of pyroelectric sensors, a round metal can with a rectangular crys
 
 PIRs have adjustable settings and have a header installed in the 3-pin ground/out/power pads.
 
+![pir_adjustable_settings](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/96dcdf3e-b8f1-499b-8dcc-64e096b11974)
+
 ![pir_adjustable_settings](https://github.com/Naif-Al-Ajlani/SM23-Elec-04/assets/98528261/badea204-1e91-4805-9ad9-2038b4e92fe8)
 
 
