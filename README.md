@@ -98,7 +98,7 @@ void loop(){
 
 ```
 
-# Simulation on tinkercad
+# Simulation in tinkercad
 
 PIR sensors motion detection tracking System on tinkercad
 
