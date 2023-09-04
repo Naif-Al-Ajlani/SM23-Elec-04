@@ -170,7 +170,7 @@ The PIR sensor can be adjusted manually by looking at the back. I had to make so
 
 # Resources
 
-+ Arduino website on PIR sensors: https//support.arduino.cc/hc/en-us/articles/4403050020114-Troubleshooting-PIR-Sensor-and-sensitivity-adjustment
++ Arduino website on PIR sensors: https://support.arduino.cc/hc/en-us/articles/4403050020114-Troubleshooting-PIR-Sensor-and-sensitivity-adjustment
 + Ardunno with PIR Motion Sensor tutorial https: www.tutorialspoint.com/arduino/arduino_pir_sensor.htm
 + PIR Motion Sensor with Arduino instructions: https: www.instructables.com/How-to-Use-a-PIR-Motion-Sensor-With-Arduino/
 + To learn more about how to adjust the "settings" of a PIR sensor: https://www.tweaking4all.com/hardware/pir-sensor/
