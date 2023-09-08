@@ -1,6 +1,8 @@
 # SM23-Elec-04
 
-Smart methods 2023 summer training (Electronics and Power Department Task 04)
+Electronics and Power Department Task 04
+
+Smart methods 2023 summer training
 
 + PIR Sensor motion detection System
 
